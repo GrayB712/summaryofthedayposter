@@ -91,7 +91,6 @@ function getCookie(cname) {
       getToken();
 
       function addComment(comment) {
-        token = document.getElementById("keyer").value;
         const repo = 'GrayB712/summaryoftheday';
         const path = `${new Date().toISOString()}`;
         const url = `https://api.github.com/repos/${repo}/contents/${path}.git`;
