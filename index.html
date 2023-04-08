@@ -97,7 +97,7 @@ function getCookie(cname) {
         fetch(url, {
           method: 'PUT',
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${window.token}`,
             'Content-Type': 'application/json',
             Accept: 'application/vnd.github.v3+json'
           },
