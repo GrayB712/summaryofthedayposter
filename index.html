@@ -28,7 +28,7 @@
 
 
 
-      <button onclick="addComment(document.querySelector('#comment').value)" style="background-color:darkblue; border-radius:5px; color:white; border:none; width:90px; height:40px; margin-left: auto; margin-right: auto" type="button">Submit</button>
+      <button id="submitButton" onclick="addComment(document.querySelector('#comment').value)" style="background-color:darkblue; border-radius:5px; color:white; border:none; width:90px; height:40px; margin-left: auto; margin-right: auto" type="button">Submit</button>
     </form>
     
 
@@ -66,7 +66,12 @@ if(theKey != null)
 //token = theKey;
 //document.getElementById("errors").innerHTML= "The Key:" + theKey;
 } else {
-history.back();
+       document.getElementById("start").type = hidden;
+       document.getElementById("class-names").type = hidden;
+       document.getElementById("comment").type = hidden;
+       document.getElementById("submitButton").type = hidden;
+       document.getElementById("success").innerHTML = "You must be signed in to add a summary";
+       document.getElementById("success").style = "color:red; font-size:40px";
 }
 }
   
