@@ -93,7 +93,7 @@ function getCookie(cname) {
         const repo = `GrayB712/summaryoftheday`;
         const path = `${whichClass}/${document.getElementById("start").value}*${new Date().toISOString()}`;
         const url = `https://api.github.com/repos/${repo}/contents/${path}.git`;
-        const message = `Add comment ${new Date().toISOString()}`;
+        const message = `Add comment ${whichClass}/${document.getElementById("start").value}*${new Date().toISOString()}`;
         const content = btoa(comment);
 
         fetch(url, {
