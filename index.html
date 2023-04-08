@@ -42,6 +42,7 @@
 
 
 <script>
+let token = null;
 function setTheDate(){
 date = new Date();
 year = date.getFullYear();
@@ -63,7 +64,7 @@ const theKey = getCookie("key");
 const newString = getCookie("key");
 if(theKey != null)
 {
-let token = theKey;
+token = theKey;
 document.getElementById("errors").innerHTML= "The Key:" + theKey;
 } else {
 history.back();
