@@ -66,12 +66,12 @@ if(theKey != "")
 //token = theKey;
 //document.getElementById("errors").innerHTML= "The Key:" + theKey;
 } else {
-       document.getElementById("start").type = hidden;
-       document.getElementById("class-names").type = hidden;
-       document.getElementById("comment").type = hidden;
-       document.getElementById("submitButton").type = hidden;
+       document.getElementById("start").style = "display:none";
+       document.getElementById("class-names").style = "display:none";
+       document.getElementById("comment").style = "display:none";
+       document.getElementById("submitButton").style = "display:none";
        document.getElementById("success").innerHTML = "You must be signed in to add a summary";
-       document.getElementById("success").style = "color:red; font-size:40px";
+       document.getElementById("success").style = "color:red; font-size:40px; font-family:Arial";
 }
 }
   
