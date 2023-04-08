@@ -88,9 +88,10 @@ function getCookie(cname) {
 }
 
       function addComment(comment) {
+        const whichClass = document.getElementById("class-names").value;
         let token = getCookie("key");
-        const repo = 'GrayB712/summaryoftheday';
-        const path = `${new Date().toISOString()}`;
+        const repo = `GrayB712/summaryoftheday/${whichClass}`;
+        const path = `${document.getElementById("start").value}*${new Date().toISOString()}`;
         const url = `https://api.github.com/repos/${repo}/contents/${path}.git`;
         const message = `Add comment ${new Date().toISOString()}`;
         const content = btoa(comment);
