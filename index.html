@@ -42,7 +42,7 @@
 
 
 <script>
-let token = null;
+//let token = null;
 function setTheDate(){
 date = new Date();
 year = date.getFullYear();
@@ -64,7 +64,7 @@ const theKey = getCookie("key");
 const newString = getCookie("key");
 if(theKey != null)
 {
-token = theKey;
+//token = theKey;
 document.getElementById("errors").innerHTML= "The Key:" + theKey;
 } else {
 history.back();
@@ -88,6 +88,7 @@ function getCookie(cname) {
 }
 
       function addComment(comment) {
+        let token = getCookie("key");
         const repo = 'GrayB712/summaryoftheday';
         const path = `${new Date().toISOString()}`;
         const url = `https://api.github.com/repos/${repo}/contents/${path}.git`;
