@@ -15,6 +15,7 @@
 <option value="SophomoreBible">Sophomore Bible</option>
 <option value="Chemistry">Chemistry</option>
 </select>
+       <p id="success" style="font-family:Arial;font-size:15px; color:green"></p>
 </center>
 </head>
 <center>
@@ -113,7 +114,8 @@ function getCookie(cname) {
           return response.json();
         })
         .then(data => {
-          const successMessage = `Post added to ${document.getElementById("class-names").value}`;
+          const successMessage = `Summary added to ${document.getElementById("class-names").value}`;
+          document.getElementById("success").innerHTML=successMessage;
           const errorMessage = '';
           updateErrorMessage(successMessage, errorMessage);
         })
