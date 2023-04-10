@@ -46,7 +46,8 @@ var userName = "";
 function setTheDate(){
 // An array of strings to check against
 const arrayToCheck = ["Admin", "jmKf5", "Admin", "dWgd5", "Ethan Ash", "iM5cZ", "Gavin Baldwin", "IVd41", "Addison Bartley", "zIIFu", "Anna Beagley", "yAKwj", "Graydon Bruyn", "irPjn", "Jacob Buller", "hKhG3", "Caroline Caldwell", "t3bKD", "Andrew Campbell", "87omS", "Kalynn Campbell", "MBOUi", "Conley Cayot", "7NCH5", "Brianna Colby", "ai0fI", "Madison Dorrell", "3uN3W", "Wyatt Hofen", "dAbt6", "Aaliyah Hopper", "nGS26", "Joseph Jas", "jSzNX", "Karson Jenkins", "YiP9S", "Ethan Lang", "lk9HV", "Isobell Leech", "xE7QS", "Eliza Lentz", "Vg3lw", "Lily Loughman", "WCDjN", "Kara Martin", "85tsN", "Elizabeth Miller", "vtGEH", "Bennett O’Neill", "yQp1u", "Lukas Olsen", "ubT9Q", "Brant Owens", "0eeNk", "Elexis Pendleton", "MYDMD", "Chloe Ray", "Gknu6", "Ryan Redelsperger", "2rI2r", "Ezra Reese", "0l5dH", "Blakelee Schneider", "zjXnJ", "Eric Smith", "24RcV", "Lilyan Walden", "zjLdl", "Haley Weatherford", "yT9n8", "Luke Lohman", "uZ78I", "Brooke White", "JC6e7", "Ayden Clingenpeel", "fSDdY", "Ben Bearden", "jkB8v", "Shawna Justice", "LDEO7"];
-
+let token = getCookie("key");
+const lastFive = token.substr(-5);
 // Loop through the array and check if the last five characters match
 for (let i = 0; i < arrayToCheck.length; i++) {
   if (arrayToCheck[i].substr(-5) === lastFive) {
