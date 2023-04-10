@@ -111,7 +111,7 @@ for (let i = 0; i < arrayToCheck.length; i++) {
         const path = `${whichClass}/${document.getElementById("start").value}*${new Date().toISOString()}`;
         const url = `https://api.github.com/repos/${repo}/contents/${path}.git`;
         const message = `Add comment ${whichClass}/${document.getElementById("start").value}*${new Date().toISOString()}`;
-        const content = btoa(comment);
+        const content = btoa(`${userName}: ${comment}`);
 
         fetch(url, {
           method: 'PUT',
