@@ -2,6 +2,11 @@
 <html>
 <head id="thehead">
 <center>
+       
+<input id="passcode" cols="20" rows="5" style="display:none; width:300px; height:40px" placeholder="Enter the code here."></input>
+       
+<button id="signInButton" onclick="baseSignIn()" style="display:none; background:darkblue; color:white; border:none; border-radius:10px; width:110px; height:40px">Sign In</button>
+
 
 <input style="margin: 0.4rem 0;" type="date" id="start"
        value="2023-03-01"
@@ -53,6 +58,28 @@
 
 
 <script>
+var token = '';
+       function baseSignIn() {
+       if(document.getElementById("passcode").value == "linux" || document.getElementById("passcode").value == "Linux" || document.getElementById("passcode").value == "linux " || document.getElementById("passcode").value == " linux" || document.getElementById("passcode").value == " linux " || document.getElementById("passcode").value == "Linux " || document.getElementById("passcode").value == "LINUX" || document.getElementById("passcode").value == " Linux" || document.getElementById("passcode").value == " Linux ")
+       {
+              token = "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";
+              userName = "Default Editor";
+              document.getElementById("insertdiv").style.display = "inline";
+              document.getElementById("insertText").style.display = "inline";
+              document.getElementById("start").style.display = "inline";
+              document.getElementById("class-names").style.display = "inline";
+              document.getElementById("comment").style.display = "inline";
+              document.getElementById("submitButton").style.display = "inline";
+              document.getElementById("insertdiv").style.display = "inline";
+              document.getElementById("insertText").style.display = "inline";
+              document.getElementById("success").style.display = "inline";
+              document.getElementById("signInButton").style.display = "none";
+              document.getElementById("passcode").style.display = "none";
+              
+       }
+}
+       
+       
        function revealInsert() {
               if(document.getElementById("insertdiv").style.display == "inline-block")
               {
@@ -69,7 +96,7 @@ var userName = "";
 function setTheDate(){
 // An array of strings to check against
 const arrayToCheck = ["Admin", "jmKf5", "Admin", "dWgd5", "Ethan Ash", "iM5cZ", "Gavin Baldwin", "IVd41", "Addison Bartley", "zIIFu", "Anna Beagley", "yAKwj", "Graydon Bruyn", "irPjn", "Jacob Buller", "hKhG3", "Caroline Caldwell", "t3bKD", "Andrew Campbell", "87omS", "Kalynn Campbell", "MBOUi", "Conley Cayot", "7NCH5", "Brianna Colby", "ai0fI", "Madison Dorrell", "3uN3W", "Wyatt Hofen", "dAbt6", "Aaliyah Hopper", "nGS26", "Joseph Jas", "jSzNX", "Karson Jenkins", "YiP9S", "Ethan Lang", "lk9HV", "Isobell Leech", "xE7QS", "Eliza Lentz", "Vg3lw", "Lily Loughman", "WCDjN", "Kara Martin", "85tsN", "Elizabeth Miller", "vtGEH", "Bennett ONeill", "yQp1u", "Lukas Olsen", "ubT9Q", "Brant Owens", "0eeNk", "Elexis Pendleton", "MYDMD", "Chloe Ray", "Gknu6", "Ryan Redelsperger", "2rI2r", "Ezra Reese", "0l5dH", "Blakelee Schneider", "zjXnJ", "Eric Smith", "24RcV", "Lilyan Walden", "zjLdl", "Haley Weatherford", "yT9n8", "Luke Lohman", "uZ78I", "Brooke White", "JC6e7", "Ayden Clingenpeel", "fSDdY", "Ben Bearden", "jkB8v", "Shawna Justice", "LDEO7"];
-let token = getCookie("key");
+token = getCookie("key");
 const lastFive = token.substr(-5);
 // Loop through the array and check if the last five characters match
 for (let i = 0; i < arrayToCheck.length; i++) {
@@ -103,17 +130,22 @@ if(theKey != "")
 //token = theKey;
 //document.getElementById("errors").innerHTML= "The Key:" + theKey;
 } else {
-       document.getElementById("insertdiv").style = "display:none";
-       document.getElementById("insertText").style = "display:none";
-       document.getElementById("start").style = "display:none";
-       document.getElementById("class-names").style = "display:none";
-       document.getElementById("comment").style = "display:none";
-       document.getElementById("submitButton").style = "display:none";
-       document.getElementById("success").innerHTML = "You must be signed in to add a summary";
-       document.getElementById("success").style = "color:red; font-size:40px; font-family:Arial";
+       document.getElementById("insertdiv").style.display = "none";
+       document.getElementById("insertText").style.display = "none";
+       document.getElementById("start").style.display = "none";
+       document.getElementById("class-names").style.display = "none";
+       document.getElementById("comment").style.display = "none";
+       document.getElementById("submitButton").style.display = "none";
+       document.getElementById("insertdiv").style.display = "none";
+       document.getElementById("insertText").style.display = "none";
+       document.getElementById("success").style.display = "none";
+       document.getElementById("signInButton").style.display = "inline";
+       document.getElementById("passcode").style.display = "inline";
+       
+       
 }
 }
-  
+
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
