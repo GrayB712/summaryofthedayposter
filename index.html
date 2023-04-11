@@ -34,11 +34,14 @@
 
 
 
-      <button id="submitButton" onclick="addComment(document.querySelector('#comment').value)" style="background-color:darkblue; border-radius:5px; color:white; border:none; width:90px; height:40px; margin-left: auto; margin-right: auto" type="button">Submit</button>
+      <button id="submitButton" onclick="addComment(document.querySelector('#comment').value)" style="font-family:Arial; background-color:darkblue; border-radius:5px; color:white; border:none; width:90px; height:40px; margin-left: auto; margin-right: auto" type="button">Submit</button>
     </form>
-    
-
-
+       <br>
+       <br>
+<button id="insertButton" onclick="revealInsert()" style="font-family:Arial; background-color:orange; border-radius:5px; color:white; border:none; width:105px; height:40px; margin-left: auto; margin-right: auto" type="button">-Insert-</button>
+<div id="insertdiv" style="padding: 15px; display: none; border-radius: 5px; border: 1px solid black; text-align: center; color: black; font-family: Arial;">
+       <h id="insertText" style="display: none; text-align: center; color: black; font-family: Arial;">To Insert A Line Break, Copy This: &ltbr&gt<br><br>To Insert A Link, Copy this And Replace https://www.google.com With Your Link:  &lta target="_self" href="https://www.google.com" target="_blank"&gtVisit W3Schools&lt/a&gt <br><br> To Insert An Image, Copy This, And Replace https://www.example.com/a.jpeg With Your Image URL: &ltimg src="https://www.example.com/a.jpeg" alt="a"&gt</h>
+</div>
 
 
 
@@ -47,6 +50,10 @@
 
 
 <script>
+       function revealInsert() {
+              document.getElementById("insertdiv").style.display = "inline-block";
+              document.getElementById("insertText").style.display = "inline-block";
+       }
 var userName = "";
 //let token = null;
 function setTheDate(){
