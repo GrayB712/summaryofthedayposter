@@ -51,14 +51,10 @@
 
 <script>
        function revealInsert() {
-              if(document.getElementById("insertdiv").style.display = "inline-block")
-              {
-                   document.getElementById("insertdiv").style.display = "none";
-                   document.getElementById("insertText").style.display = "none";  
-              } else {
+              
                    document.getElementById("insertdiv").style.display = "inline-block";
                    document.getElementById("insertText").style.display = "inline-block"; 
-              }
+              
               
        }
 var userName = "";
@@ -100,6 +96,8 @@ if(theKey != "")
 //token = theKey;
 //document.getElementById("errors").innerHTML= "The Key:" + theKey;
 } else {
+       document.getElementById("insertdiv").style = "display:none";
+       document.getElementById("insertText").style = "display:none";
        document.getElementById("start").style = "display:none";
        document.getElementById("class-names").style = "display:none";
        document.getElementById("comment").style = "display:none";
