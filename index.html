@@ -64,6 +64,7 @@ var token = '';
        {
               token = "github_" + "pat_" + "1" + "1A2AODOA0UBeqKPyidD4m_PdqKOrLiyz2g0aDKgJNtjvGsu1FTIlKoPuiumSH9popW2QQRUF5tQMRYWAj";
               userName = "Default Editor";
+              console.log(userName);
               document.getElementById("insertText").style.display = "inline";
               document.getElementById("start").style.display = "inline";
               document.getElementById("class-names").style.display = "inline";
@@ -160,8 +161,8 @@ function getCookie(cname) {
 
       function addComment(comment) {
         const whichClass = document.getElementById("class-names").value;
-        let token = getCookie("key");
-        const lastFive = token.substr(-5);
+        //let token = getCookie("key");
+        //const lastFive = token.substr(-5);
 
 
         const repo = `GrayB712/summaryoftheday`;
