@@ -116,8 +116,7 @@ var timeZoneFromDB = -10.00; //time zone value from database
 var tzDifference = timeZoneFromDB * 60 + targetTime.getTimezoneOffset();
 //convert the offset to milliseconds, add to targetTime, and make a new Date
 document.getElementById("start").valueAsDate = new Date(targetTime.getTime() + tzDifference * 60 * 1000);;
-if (navigator.userAgent.match(/Android/i)
-         || navigator.userAgent.match(/webOS/i)
+if (navigator.userAgent.match(/webOS/i)
          || navigator.userAgent.match(/iPhone/i)
          || navigator.userAgent.match(/iPad/i)
          || navigator.userAgent.match(/iPod/i)
@@ -125,6 +124,10 @@ if (navigator.userAgent.match(/Android/i)
          || navigator.userAgent.match(/Windows Phone/i)) {
             document.getElementById("comment").rows="25";
             document.getElementById("comment").cols="34";
+         }
+       if (navigator.userAgent.match(/Android/i)) {
+            document.getElementById("comment").rows="25";
+            document.getElementById("comment").cols="26";
          }
 
 const theKey = getCookie("key");
